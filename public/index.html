@@ -1,0 +1,19 @@
+<body>
+  <div id="app">
+    <button onclick="login()">
+      login via Github
+    </button>
+  <div>
+  <script>
+    if (location.search.length > 0) {
+      var app = document.getElementById('app');
+      app.innerHTML = location.search;
+    }
+    var client_id = 'client_id';
+    var loginUrl = 'https://github.com/login/oauth/authorize?client_id=' + client_id;
+    function login() {
+      window.location.href = loginUrl;
+    }
+  </script>
+</body>
+
